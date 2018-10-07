@@ -4,27 +4,88 @@
     <meta charset="utf-8">
     <title>Carousel demo</title>
     <link rel="stylesheet" type="text/css" href="./carousel/carousel.css" >
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #fefefe;
+        }
+
+        .container {
+            margin-left: 15%;
+            width: 70%;
+            padding-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Демонстрация</h1>
+        <hr>
+        <p>1. Список фотографий в режиме "Галерея".</p>
+        <ul id="demoGallery">
+            <li><img src="./images/1.jpg"></li>
+            <li><img src="./images/2.jpg"></li>
+            <li><img src="./images/3.jpg"></li>
+            <li><img src="./images/4.jpg"></li>
+            <li><img src="./images/5.jpg"></li>
+            <li><img src="./images/6.jpg"></li>
+            <li><img src="./images/7.jpg"></li>
+            <li><img src="./images/8.jpg"></li>
+            <li><img src="./images/9.jpg"></li>
+        </ul>
 
-    <ul id="demoCarousel">
-        <li><img src="./images/1.jpg"></li>
-        <li><img src="./images/2.jpg"></li>
-        <li><img src="./images/3.jpg"></li>
-        <li><img src="./images/4.jpg"></li>
-        <li><img src="./images/5.jpg"></li>
-        <li><img src="./images/6.jpg"></li>
-        <li><img src="./images/7.jpg"></li>
-        <li><img src="./images/8.jpg"></li>
-        <li><img src="./images/9.jpg"></li>
-    </ul>
+        <p>2. Обычный список фотографий с зацикливанием</p>
+        <ul id="demoLoopCarousel">
+            <li><img src="./images/1.jpg"></li>
+            <li><img src="./images/2.jpg"></li>
+            <li><img src="./images/3.jpg"></li>
+            <li><img src="./images/4.jpg"></li>
+            <li><img src="./images/5.jpg"></li>
+            <li><img src="./images/6.jpg"></li>
+            <li><img src="./images/7.jpg"></li>
+            <li><img src="./images/8.jpg"></li>
+            <li><img src="./images/9.jpg"></li>
+        </ul>
+
+        <p>3. Обычный список фотографий без зацикливания</p>
+        <ul id="demoCarousel">
+            <li><img src="./images/1.jpg"></li>
+            <li><img src="./images/2.jpg"></li>
+            <li><img src="./images/3.jpg"></li>
+            <li><img src="./images/4.jpg"></li>
+            <li><img src="./images/5.jpg"></li>
+            <li><img src="./images/6.jpg"></li>
+            <li><img src="./images/7.jpg"></li>
+            <li><img src="./images/8.jpg"></li>
+            <li><img src="./images/9.jpg"></li>
+        </ul>
+    </div>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./carousel/jquery.carousel.js"></script>
     <script>
         $(document).ready(function() {
-            $('#demoCarousel').carousel({
+            $('#demoGallery').carousel({
+                gallery: true,
+                items: 1,
+                thumbItems: 3,
+                slideMargin: 0,
+                speed: 500,
+                loop: true
+            });
 
+            $('#demoLoopCarousel').carousel({
+                items: 4,
+                slideMargin: 5,
+                loop: true
+            });
+
+            $('#demoCarousel').carousel({
+                items: 6,
+                slideMargin: 5,
             });
         });
     </script>
