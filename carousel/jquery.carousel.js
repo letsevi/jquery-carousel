@@ -1,4 +1,4 @@
-; (function ($) {
+;(function ($) {
 
     var defaults = {
         items: 3,           //Количество элементов, которые видно на экране
