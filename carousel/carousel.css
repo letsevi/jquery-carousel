@@ -66,14 +66,14 @@
 }
 .jqCarouselOuter .jqPager.jqGallery li.active, 
 .jqCarouselOuter .jqPager.jqGallery li:hover {
-    outline: 2px dashed #BDBDBD;
-    outline-offset: -3px;
+    outline: 2px dashed #F57C00;
+    outline-offset: -8px;
 }
 
 .jqCarouselOuter .jqCarousel:not(.jqGallery) li.active,
 .jqCarouselOuter .jqCarousel:not(.jqGallery) li:hover {
-    outline: 2px dashed #BDBDBD;
-    outline-offset: -3px;
+    outline: 2px dashed #F57C00;
+    outline-offset: -8px;
 }
 
 .jqCarouselOuter .jqPager.jqGallery img {
